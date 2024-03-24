@@ -1,0 +1,26 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+From AWS Config:
+- The value of routing.http.drop_invalid_header_fields.enabled is set to false.
+- The encryption of data at rest is not enabled for an Athena workgroup.
+- The Amazon Elastic Block Store (EBS) encryption is not enabled.
+- One or more HTTP listeners of Application Load Balancers do not have HTTP to HTTPS redirection configured.
+- The Amazon Elastic Block Store (EBS) encryption is not enabled.
+- Amazon Elastic Compute Cloud (Amazon EC2) instance metadata version is not configured with Instance Metadata Service Version 2 (IMDSv2).
+- The publicIp field is present in the Amazon EC2 instance configuration item.
+- The access_logs.s3.enabled is false or access_logs.S3.bucket is not equal to the s3BucketName that you provided.
+- The EBS volumes are not in an attached state are encrypted with that KMS key.
+- The Elastic Load Balancing deletion_protection.enabled is false.
+- The account password policy for IAM users don't prevent password reuse.
+
+From AWS Security Hub:
+- VPC default security groups should not allow inbound or outbound traffic
+- EC2 subnets should not automatically assign public IP addresses
+- Security contact information should be provided for an AWS account.
+- Network ACLs should not allow ingress from 0.0.0.0/0 to port 22 or port 3389
+- Amazon EC2 should be configured to use VPC endpoints that are created for the Amazon EC2 service
+- S3 general purpose buckets should have block public access settings enabled
+- S3 general purpose buckets should have event notifications enabled
+- S3 general purpose buckets should require requests to use SSL

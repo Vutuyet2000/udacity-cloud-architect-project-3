@@ -1,0 +1,9 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+No limitation permission for Web Service Instance.
+The objective of this instance is to receive free recipes from S3 but we allow it full permission (get, post, put, delete).
+
+# Poor practice 2
+No access restriction to Web Service Instance: Web Service Instance should allow range of ip from Internet Gateway or Application Load Balancer.
+Moreover, Web Service Instance uses port 5000 (TCP), which is easily hacked.
